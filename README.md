@@ -15,6 +15,17 @@ This is a sample application that you can use to follow along with the tutorial 
 
 This sample application is generated from the default Rails project and modified minimally to make it work with Azure App Service. 
 
+## Quick Start
+Follow the commands below.
+```bash
+# Install bundler(v1.16.2)
+gem install bundler:1.16.2
+
+# Install required packages
+bundle install --path vendor/bundle
+```
+
+
 ## License
 
 See [LICENSE](https://github.com/Azure-Samples/rubyrails-tasks/blob/master/LICENSE.md).
