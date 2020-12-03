@@ -17,12 +17,33 @@ This sample application is generated from the default Rails project and modified
 
 ## Quick Start
 Follow the commands below.
+
+[DB start](https://dataschool.com/learn-sql/how-to-start-a-postgresql-server-on-mac-os-x/)
+```bash
+# Start up postgres server locally on port 5432
+pg_ctl -D /usr/local/var/postgres start
+
+# (Optional) In case of version conflict on brew
+brew postgresql-upgrade-database
+
+# Connect to server
+psql postgres
+
+# Stop
+pg_ctl -D /usr/local/var/postgres stop
+
+# Docker
+docker run -d --rm --name my_postgres -e POSTGRES_PASSWORD=881224 -p 5432:5432 postgres:11
+```
+
+Server start
 ```bash
 # Install bundler(v1.16.2)
 gem install bundler:1.16.2
 
 # Install required packages
 bundle install --path vendor/bundle
+
 ```
 
 
