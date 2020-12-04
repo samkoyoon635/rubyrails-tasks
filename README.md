@@ -18,7 +18,8 @@ This sample application is generated from the default Rails project and modified
 ## Quick Start
 Follow the commands below.
 
-[DB start](https://dataschool.com/learn-sql/how-to-start-a-postgresql-server-on-mac-os-x/)
+### DB start
+[Local Postgres](https://dataschool.com/learn-sql/how-to-start-a-postgresql-server-on-mac-os-x/)
 ```bash
 # Start up postgres server locally on port 5432
 pg_ctl -D /usr/local/var/postgres start
@@ -32,11 +33,26 @@ psql postgres
 # Stop
 pg_ctl -D /usr/local/var/postgres stop
 
+# DB create and migrate
+rake db:create
+rake db:migrate
+```
+Docker Postgres (Only works as [docker-compose](https://medium.com/better-programming/setting-up-rails-with-postgres-using-docker-426c853e8590))
+```bash
 # Docker
 docker run -d --rm --name my_postgres -e POSTGRES_PASSWORD=881224 -p 5432:5432 postgres:11
-```
 
-Server start
+# Connect to server
+docker exec -it my_postgres psql -U postgres
+
+# define password for user (e.g. postgres)
+\password postgres
+
+# DB create and migrate
+rake db:create
+rake db:migrate
+```
+### Server start
 ```bash
 # Install bundler(v1.16.2)
 gem install bundler:1.16.2
