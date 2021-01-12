@@ -54,7 +54,7 @@ rake db:migrate
 ```
 ### Server start
 ```bash
-# Install bundler(v1.16.2)
+# Install bundler(v1.16.2, 1.13.6)
 gem install bundler:1.16.2
 
 # Install required packages
